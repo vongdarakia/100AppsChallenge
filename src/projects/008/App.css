@@ -1,0 +1,44 @@
+.RandomQuotesApp {
+	text-align: center;
+	margin: 0;
+	padding: 100px 0;
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 100;
+	font-size: 2em;
+	color: white;
+	background-color: #22313F;
+}
+
+.RandomQuotesApp .box-wrapper {
+	width: 500px;
+	margin: auto;
+}
+.RandomQuotesApp .quote-box {
+	min-height: 220px;
+}
+
+.RandomQuotesApp .quote {
+	text-align: left;
+}
+
+.RandomQuotesApp .author {
+	text-align: right;
+}
+
+.RandomQuotesApp .btn-next-wrapper {
+	text-align: right;
+}
+
+.RandomQuotesApp .btn-next {
+	cursor: pointer;
+	transition: color .3s;
+}
+
+.RandomQuotesApp .btn-next:hover {
+	color: #3498DB;
+}
+
+.RandomQuotesApp .btn-next:active {
+	transition: none;
+	color: #89C4F4;
+}

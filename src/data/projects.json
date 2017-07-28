@@ -1,0 +1,127 @@
+[
+	{
+		"id": 1,
+		"name": "Balloon",
+		"date": "6/22/2017",
+		"description": "Inflate a balloon and pop it!",
+		"url": "https://react-app-001.herokuapp.com",
+		"notes": "Tried to build a calculator, but failed badly because I didn't know how to structure react components properly. It was confusing to figure out how to edit the total from a parent component. Then time was running out, so I made a simple balloon app."
+	},
+	{
+		"id": 2,
+		"name": "Binary Light Switches",
+		"date": "6/23/2017",
+		"description": "A light switch representation of a 4 bit binary number.",
+		"url": "https://react-app-002.herokuapp.com",
+		"notes": ""
+	},
+	{
+		"id": 3,
+		"name": "Money Ticker",
+		"date": "6/24/2017",
+		"description": "Money clicker game. The more you click, the more money you make!",
+		"url": "https://react-app-003.herokuapp.com",
+		"notes": ""
+	},
+	{
+		"id": 4,
+		"name": "List Search",
+		"date": "6/25/2017",
+		"description": "Search/filter through a list of things about me!",
+		"url": "https://react-app-004.herokuapp.com",
+		"notes": ""
+	},
+	{
+		"id": 5,
+		"name": "Mini Menu",
+		"date": "6/26/2017",
+		"description": "Interactive restaurant menu.",
+		"url": "https://react-app-005.herokuapp.com",
+		"notes": ""
+	},
+	{
+		"id": 6,
+		"name": "Typing Game",
+		"date": "6/27/2017",
+		"description": "Type all the letters that appears on the screen or else...",
+		"url": "https://react-app-006.herokuapp.com",
+		"notes": ""
+	},
+	{
+		"id": 7,
+		"name": "Simple Animation",
+		"date": "6/28/2017",
+		"description": "Click on a tile and watch it change colors!",
+		"url": "https://react-app-007.herokuapp.com",
+		"notes": ""
+	},
+	{
+		"id": 8,
+		"name": "Random Quotes",
+		"date": "6/30/2017",
+		"description": "Get a random quote from movies, books and celebrities.",
+		"url": "https://react-app-008.herokuapp.com",
+		"notes": ""
+	},
+	{
+		"id": 9,
+		"name": "Love Match",
+		"date": "7/2/2017",
+		"description": "See if your name matches well with your crush ;)",
+		"url": "https://react-app-009.herokuapp.com",
+		"notes": ""
+	},
+	{
+		"id": 10,
+		"name": "Not-to-do List",
+		"date": "7/3/2017",
+		"description": "To do or not to do? That is the question.",
+		"url": "https://react-app-010.herokuapp.com",
+		"notes": "Early Morning"
+	},
+	{
+		"id": 11,
+		"name": "Navigation Menu",
+		"date": "7/4/2017",
+		"description": "Simple navigation menu. Incredibly simple.",
+		"url": "https://react-app-011.herokuapp.com",
+		"notes": "Super early morning"
+	},
+	{
+		"id": 12,
+		"name": "Day Count Down",
+		"date": "7/5/2017",
+		"description": "Calculate how long ago or how long till another date from now.",
+		"url": "https://react-app-012.herokuapp.com",
+		"notes": "Super early morning"
+	},
+	{
+		"id": 13,
+		"name": "Dice Roll",
+		"date": "7/14/2017",
+		"description": "Roll a die, or two, or three! (or more!?)",
+		"url": "https://react-app-013.herokuapp.com",
+		"notes": "Super early morning"
+	},
+	{
+		"id": 14,
+		"name": "Portfolio v1",
+		"date": "7/24/2017",
+		"description": "A redux gallery of react apps by moi.",
+		"url": "https://react-app-014.herokuapp.com"
+	},
+	{
+		"id": 15,
+		"name": "Guess the President",
+		"date": "7/26/2017",
+		"description": "Test how American you are by guessing the names of the presidents.",
+		"url": "https://react-app-015.herokuapp.com"
+	},
+	{
+		"id": 16,
+		"name": "Portfolio v2",
+		"date": "7/27/2017",
+		"description": "Same portfolio, but now with routing! No more slow loads!",
+		"url": ""
+	}
+]

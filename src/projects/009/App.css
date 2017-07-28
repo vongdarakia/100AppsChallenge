@@ -1,0 +1,64 @@
+.LoveMatchApp {
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	background-color: #2c3e50;
+	font-family: sans-serif;
+	font-weight: 100;
+	box-sizing: border-box;
+}
+
+.LoveMatchApp *,
+.LoveMatchApp *::before,
+.LoveMatchApp *::after {
+	box-sizing: inherit;
+}
+
+.LoveMatchApp .loading {
+	position: absolute;
+	top: 120px;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.LoveMatchApp .loading-logo {
+	max-width: 100%;
+	max-height: 100%;
+	color: #1B2B34;
+	display: inline !important;
+
+	transition: color .5s;
+	-webkit-transition: color .5s;
+}
+
+.LoveMatchApp .container {
+	padding: 200px 0;
+	color: white;
+}
+
+.LoveMatchApp .inputs {
+	margin: 20px 0;
+}
+
+.LoveMatchApp input[name=name1] {
+	margin-right: 10px;
+}
+
+.LoveMatchApp .phrase {
+	margin-top: 40px;
+}
+
+.LoveMatchApp .match {
+	font-size: 2em;
+	margin-bottom: 10px;
+}
+
+@keyframes expand {
+	from {
+		padding: 25px;
+	}
+	to {
+		padding: 50px;
+		box-shadow: 0px 0px 30px #2c3e50;
+	}
+}

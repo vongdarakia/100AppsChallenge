@@ -1,0 +1,120 @@
+.MoneyTickerApp {
+	text-align: center;
+	background-color: #ECECEC;
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	padding: 100px 0;
+}
+
+.MoneyTickerApp .cash {
+	color: #00B16A;
+	font-size: 2em;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.MoneyTickerApp .box-income {
+	overflow: auto;
+	width: 300px;
+	height: 100px;
+	display: inline-block;
+	margin: 2px;
+}
+
+.MoneyTickerApp .col-left,
+.MoneyTickerApp .col-right {
+	display: inline-block;
+	height: 100%;
+	position: relative;
+	text-align: center;
+	overflow: hidden;
+}
+
+.MoneyTickerApp .col-left {
+	float: left;
+	width: 33%;
+	background-color: #34495E;
+	color: white;
+	-webkit-transition: background-color 0.3s;
+	transition: background-color 0.3s;
+}
+
+.MoneyTickerApp .col-right {
+	float: right;
+	width: 67%;
+	background-color: #6C7A89;
+}
+
+.MoneyTickerApp .buy,
+.MoneyTickerApp .name {
+	position: absolute;
+	line-height: 100px;
+	margin: 0;
+	width: 100%;
+	top: -10px
+}
+
+.MoneyTickerApp .cost,
+.MoneyTickerApp .income,
+.MoneyTickerApp .click-income {
+	font-size: .7em;
+	position: absolute;
+	line-height: 100px;
+	margin: 0;
+	top: 10px;
+	width: 100%;
+}
+
+.MoneyTickerApp .name {
+	top: -20px;
+}
+
+.MoneyTickerApp .income {
+	top: 0;
+}
+
+.MoneyTickerApp .click-income {
+	top: 15px;
+}
+
+.MoneyTickerApp .red {
+	color: #C0392B;
+}
+
+.MoneyTickerApp .green {
+	color: #00B16A;
+}
+
+.MoneyTickerApp .btn-buy,
+.MoneyTickerApp .btn-click {
+	cursor: pointer;
+}
+
+.MoneyTickerApp .col-left:not(.disabled):hover {
+	background-color: #67809F;
+}
+
+.MoneyTickerApp .col-right:not(.disabled):hover {
+	background-color: #67809F;
+}
+
+.MoneyTickerApp .btn-buy:active {
+	color: #2C3E50;
+}
+
+.MoneyTickerApp .btn-click:not(.disabled):active,
+.MoneyTickerApp .btn-click:not(.disabled):active span {
+	color: white;
+}
+
+.MoneyTickerApp .btn-buy.disabled,
+.MoneyTickerApp .btn-click.disabled {
+	cursor: default;
+	color: #cdcdcd;
+}
+
+.MoneyTickerApp .col-left.disabled,
+.MoneyTickerApp .col-right.disabled {
+	background-color: #bdbdbd;
+}

@@ -1,0 +1,84 @@
+.ListSearchApp .App {
+	text-align: center;
+	font-weight: 100;
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	background-color: #ECECEC;
+}
+
+.ListSearchApp .header-title {
+	margin: 0 0 20px 0;
+	font-weight: 100;
+}
+
+.ListSearchApp .items {
+	padding: 0;
+	width: 500px;
+	margin: auto;
+}
+
+.ListSearchApp .item {
+	text-align: left;
+	list-style: none;
+	margin: 4px 0;
+	background-color: #DADFE1;
+	overflow: hidden;
+}
+
+.ListSearchApp .item-type, .ListSearchApp .item-val {
+	padding: 6px 0;
+}
+
+.ListSearchApp .item-type {
+	padding: 6px 10px;
+	width: 80px;
+	float: left;
+}
+
+.ListSearchApp .item-val {
+	padding-left: 10px;
+	float: left;
+}
+
+.ListSearchApp .input-wrapper {
+	padding: 20px;
+}
+
+.ListSearchApp .input-search {
+	text-align: center;
+	background-color: transparent;
+	border: none;
+	border-bottom: 1px solid #d3d3d3;
+	font-size: 1em;
+	transition: border-bottom .5s;
+}
+
+.ListSearchApp .input-search:focus {
+	outline: none;
+	border-bottom: 1px solid #67809F;
+}
+
+.ListSearchApp .Movie {
+	background-color: #EF4836;
+}
+
+.ListSearchApp .Interest {
+	background-color: #87D37C;
+}
+
+.ListSearchApp .Idol {
+	background-color: #9B59B6;
+}
+
+.ListSearchApp .Hobby {
+	background-color: #F9BF3B;
+}
+
+.ListSearchApp .Show {
+	background-color: #F89406;
+}
+
+.ListSearchApp .Education {
+	background-color: #4183D7;
+}

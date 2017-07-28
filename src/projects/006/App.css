@@ -1,0 +1,67 @@
+.TypingGameApp {
+	font-weight: 100;
+	color: white;
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+
+}
+
+.TypingGameApp .container {
+	background-color: #34495E;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+}
+
+.TypingGameApp .letters {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.TypingGameApp .letter {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	box-sizing: border-box;
+	margin: 5px;
+	height: 50px;
+	width: 50px;
+
+	-webkit-user-select: none;  /* Chrome all / Safari all */
+	-moz-user-select: none;     /* Firefox all */
+	-ms-user-select: none;      /* IE 10+ */
+	user-select: none;          /* Likely future */
+
+	background: #00B16A;
+	border-radius: 50px;
+
+	color: #fff;
+}
+
+.TypingGameApp .score {
+	font-size: 2em;
+	padding-bottom: 10px;
+}
+
+.TypingGameApp .multiplier, .TypingGameApp .streak {
+	font-size: .8em;
+}
+
+.TypingGameApp .info {
+	position: relative;
+	padding-bottom: 20px;
+}
+
+.TypingGameApp .explanation {
+	margin: 20px 0;
+}

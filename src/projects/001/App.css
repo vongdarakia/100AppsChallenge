@@ -1,0 +1,17 @@
+.BalloonApp {
+  text-align: center;
+}
+
+.BalloonApp #balloon {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	background-color: red;
+	margin: auto;
+}
+
+.BalloonApp .btn {
+	width: 100px;
+	font-size: 2em;
+	margin: 10px;
+}

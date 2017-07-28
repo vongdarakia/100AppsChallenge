@@ -1,0 +1,78 @@
+.GuessPresidentApp {
+	text-align: center;
+	padding: 20px 0 100px 0;
+	background-color: #2574A9;
+	font-family: 'Italianno', cursive;
+	font-size: 1.5em;
+	font-weight: 100;
+}
+
+.GuessPresidentApp #btn-skip, .GuessPresidentApp #btn-answer {
+	margin-top: 20px;
+	border: none;
+	padding: 10px 20px;
+	font-size: 1.2em;
+	background-color: #EEEEEE;
+
+	cursor: pointer;
+	transition: all .3s;
+	font-family: 'Italianno', cursive;
+}
+
+.GuessPresidentApp #btn-skip:hover,
+.GuessPresidentApp #btn-answer:hover {
+	background-color: #EF4836;
+	color: white;
+}
+
+.GuessPresidentApp .img-wrapper {
+	height: 300px;
+	width: 300px;
+	margin: auto;
+}
+
+.GuessPresidentApp img {
+	height: 100%;
+	width: 100%;
+	object-fit: contain;
+}
+
+.GuessPresidentApp .inputs {
+	margin-top: 20px;
+}
+
+.GuessPresidentApp ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+	color: #969696;
+}
+.GuessPresidentApp :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	color: #969696;
+	opacity:  1;
+}
+.GuessPresidentApp ::-moz-placeholder { /* Mozilla Firefox 19+ */
+	color: #969696;
+	opacity:  1;
+}
+.GuessPresidentApp :-ms-input-placeholder { /* Internet Explorer 10-11 */
+	color: #969696;
+}
+.GuessPresidentApp ::-ms-input-placeholder { /* Microsoft Edge */
+	color: #969696;
+}
+
+.GuessPresidentApp #name {
+	text-align: center;
+	font-size: 18px;
+	background-color: transparent;
+	border: none;
+	border-bottom: 1px solid #ddd;
+	color: #EEEEEE;
+	outline: none;
+	font-size: 1.5em;
+	font-family: 'Italianno', cursive;
+}
+
+.GuessPresidentApp h3 {
+	color: #EF4836;
+	font-size: 1.5em;
+	margin-bottom: 10px;
+}

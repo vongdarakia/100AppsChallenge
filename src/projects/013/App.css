@@ -1,0 +1,44 @@
+.DiceRollApp {
+  text-align: center;
+  padding: 100px 0;
+  font-family: sans-serif;
+  background-color: #34495E;
+  color: #ECECEC;
+  font-family: 'Ruslan Display', cursive;
+}
+
+.DiceRollApp .die {
+  width: 64px;
+  height: 64px;
+  line-height: 64px;
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.DiceRollApp .die img {
+  width: 64px;
+  height: 64px;
+}
+
+.DiceRollApp .total {
+  font-family: 'Ruslan Display', cursive;
+  font-size: 4em;
+}
+
+.DiceRollApp input {
+  width: 40px;
+  background-color: transparent;
+  border: none;
+  font-size: 1em;
+  color: #ECECEC;
+  border-bottom: 1px solid #ECECEC;
+  text-align: center;
+}
+
+.DiceRollApp button {
+  margin-top: 10px;
+  padding: 6px 10px 0 10px;
+  outline: none;
+  font-family: 'Ruslan Display', cursive;
+  font-size: 2em;
+}

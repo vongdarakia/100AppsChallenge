@@ -1,0 +1,46 @@
+.DayCountDownApp {
+	text-align: center;
+	margin: 0;
+	padding: 200px 0;
+	font-family: 'Fredericka the Great', cursive;
+	background-color: #22313F;
+	color: #ECECEC;
+}
+
+.DayCountDownApp .inputs input {
+	margin: 0 10px;
+	text-align: center;
+	font-size: 1.5em;
+	width: 150px;
+	background-color: transparent;
+	border: none;
+	border-bottom: 1px solid #ECECEC;
+	color: #ECECEC;
+	font-family: 'Fredericka the Great', cursive;
+	outline: none;
+	transition: border-color .5s;
+}
+
+.DayCountDownApp .inputs input:focus {
+	border-bottom-color: #6BB9F0;
+}
+.DayCountDownApp .comment, .DayCountDownApp .count-down {
+	font-weight: 100;
+}
+
+.DayCountDownApp .past {
+	color: #EC644B;
+}
+
+.DayCountDownApp .future {
+	color: #6BB9F0;
+}
+
+.DayCountDownApp .invalid {
+	color: #EC644B !important;
+	border-bottom-color: #EC644B !important;
+}
+
+.DayCountDownApp .date {
+	color: #ECECEC;
+}
