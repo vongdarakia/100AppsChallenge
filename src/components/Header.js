@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import { pad } from '../utils';
+import { pad } from '../utils';
 import { Link } from 'react-router-dom';
 
 class Header extends React.Component {
@@ -11,7 +11,19 @@ class Header extends React.Component {
 		// let id = pad(props.id, 3);
 		return (
 			<div className="header">
-				{props.projects[props.projectIdx].name}
+				<div>
+					<Link to={"/project/" + pad(props.project.id - 1, 3)}>
+						<button>Previous</button>
+					</Link>
+					<p className="projectId">{pad(props.project.id, 3)}</p>
+					<Link to={"/project/" + pad(props.project.id + 1, 3)}>
+						<button>Next</button>
+					</Link>
+				</div>
+				<div>
+					<p className="projectName">{props.project.name}</p>
+					<p className="projectDescription">{props.project.description}</p>
+				</div>
 			</div>
 			// <li
 			// 	className="project flex-item"

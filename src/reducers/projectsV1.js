@@ -1,6 +1,6 @@
-let initProjects = require('../data/projects.json');
+let initProjects = require('../projects/014/data/projects.json');
 
-const projects = (state = initProjects, action) => {
+const projectsV1 = (state = initProjects, action) => {
 	switch (action.type) {
 		case 'DO_SOMETHING':
 			return [
@@ -15,4 +15,4 @@ const projects = (state = initProjects, action) => {
 	}
 }
 
-export default projects;
+export default projectsV1;

@@ -8,6 +8,47 @@
 	font-size: 2em;
 }
 
+.header {
+
+}
+
+.header button {
+	display: inline-block;
+	border: 1px solid #3c3c3c;
+	background-color: transparent;
+	border-radius: 4px;
+	padding: 6px 0px;
+	min-width: 70px;
+	color: #3c3c3c;
+	cursor: pointer;
+	z-index: 1000;
+
+	transition: all .3s;
+}
+
+.header button:hover {
+	color: tomato;
+	border-color: tomato;
+}
+
+.header .projectId {
+	display: inline-block;
+	width: 100px;
+	text-align: center;
+}
+
+.header .projectName, .header .projectDescription {
+	margin: 0 0 5px 0;
+	max-width: 500px;
+	margin: auto;
+}
+
+.header {
+	padding-bottom: 10px;
+	/*border-bottom: 1px solid #c6c6c6;*/
+	box-shadow: 0px 2px 5px #afafaf;
+}
+
 .projects {
 	padding: 4px;
 	margin: 0;

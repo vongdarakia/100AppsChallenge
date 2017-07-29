@@ -11,7 +11,7 @@ class Project extends React.Component {
 				onClick={ this.props.onClick }
 			>
 				<a href={props.url}>
-					<img src={"img/" + pad(props.id, 3) + ".png"} alt="" />
+					<img src={"/img/" + pad(props.id, 3) + ".png"} alt="" />
 					<div className="overlay"></div>
 					<span className="project-id">{pad(props.id, 3)}</span>
 					<span className="project-name">{props.name}</span>

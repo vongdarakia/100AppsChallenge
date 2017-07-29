@@ -9,10 +9,20 @@ export const doSomething = (name) => {
 	}
 }
 
-export const changeProject = (project) => {
+export const changeProject = (projectIdx) => {
+	console.log("changing project");
+	console.log(projectIdx);
 	return {
-		type: 'CHANGE_HEADER',
-		project
+		type: 'CHANGE_PROJECT',
+		projectIdx
+	}
+}
+
+export const nextProject = () => {
+	console.log("next project");
+	// console.log(projectIdx);
+	return {
+		type: 'NEXT_PROJECT'
 	}
 }
 

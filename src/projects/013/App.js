@@ -42,7 +42,7 @@ class DiceRollApp extends Component {
         <div className="dice">
           {this.state.dice.map((item, key) => (
             <div className="die" key={key}>
-              <img src={"img/proj-013/"+item+".png"} alt=""></img>
+              <img src={"/img/proj-013/"+item+".png"} alt=""></img>
             </div>
           ))}
         </div>

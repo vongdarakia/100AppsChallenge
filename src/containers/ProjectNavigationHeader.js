@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 // import { bindActionCreators } from 'redux';
-import { changeProject } from '../actions';
+import { changeProject, nextProject } from '../actions';
 import Header from '../components/Header';
 
 // The state is the store
@@ -15,6 +15,9 @@ const mapDispatchToProps = dispatch => {
 	return {
 		changeProject: (idx) => {
 			dispatch(changeProject(idx));
+		},
+		nextProject: () => {
+			dispatch(nextProject());
 		}
 		// actions: bindActionCreators(Actions, dispatch)
 	};
