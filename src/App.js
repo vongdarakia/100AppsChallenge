@@ -24,16 +24,20 @@ class PortfolioApp extends Component {
 					let props = ProjectMap[project.id] ? ProjectMap[project.id].props : null;
 					let app = ProjectMap[project.id] ? ProjectMap[project.id].app : null;
 					console.log(project);
+					let controller = (<Route
+						key={"controller-" + idx}
+						path={"/project/" + pad(project.id, 3)}
+						render={
+							() => {
+								return React.createElement(ProjectNavigationHeader, { project });
+							}
+						} />);
+					if (project.id == 16) {
+						controller = "";
+					}
 					return (
 						<div key={"group-" + idx}>
-							<Route
-								key={"controller-" + idx}
-								path={"/project/" + pad(project.id, 3)}
-								render={
-									() => {
-										return React.createElement(ProjectNavigationHeader, { project });
-									}
-								} />
+							{controller}
 							<Route
 								key={idx}
 								path={"/project/" + pad(project.id, 3)}

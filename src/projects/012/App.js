@@ -92,6 +92,11 @@ class DayCountDownApp extends Component {
 			}, 1000)
 		});
 	}
+
+	componentWillUnmount() {
+		clearInterval(this.state.timer);
+	}
+
 	render() {
 		let countDown = "";
 		let comment = "";
@@ -122,7 +127,7 @@ class DayCountDownApp extends Component {
 			else
 				countDown = `${this.state.hoursTill}:${this.state.minsTill}:${this.state.secsTill}`;
 		}
-		
+
 		return (
 			<div className="DayCountDownApp">
 				<div className="inputs">

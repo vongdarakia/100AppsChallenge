@@ -13,7 +13,7 @@ class Project extends React.Component {
 				onClick={ this.props.onClick }
 			>
 				<Link to={"/project/" + id}>
-					<img src={"img/" + id + ".png"} alt=""/>
+					<img src={"/img/" + id + ".png"} alt=""/>
 					<div className="overlay"></div>
 					<span className="project-id">{id}</span>
 					<span className="project-name">{props.name}</span>
