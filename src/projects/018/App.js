@@ -23,17 +23,35 @@ class BasicDecryptionApp extends Component {
 		let rotation = self.getValidRotation();
 		let wordArr = self.getRandomWord();
 		let encryptedArr = self.encryptWord(wordArr, rotation);
-		let rotations = encryptedArr.map(e => rotation);
 
 		self.state = {
 			wordArr,
 			encryptedArr,
 			rotation,
-			rotations,
 			numStrikes: 0,
 			limit: 3,
 			numCorrect: 0,
-			status: ""
+			status: "",
+			insults0: [
+				"Wow. I hope you're not trying to get into cyber security.",
+				"Seriously? You had 3 chances.",
+				"Disappointed. Even my grandma can figure one out."
+			],
+			insults1: [
+				"Not bad, but you still suck.",
+				"At least you got something. Most likely luck.",
+				"If you tried, you'd probably not suck like this."
+			],
+			insults2: [
+				"That was good, but you're lazy to have stopped this far.",
+				"Why stop at two? At least have the decency to tell me this game sucks.",
+				"You pretty much got it down, so what happened? Do better next time!"
+			],
+			insults3: [
+				"Nice job. You have no life.",
+				"Why did you even play this far?",
+				"Did you really find this game fun? I'm surprised you got this far."
+			],
 		}
 	}
 
@@ -49,9 +67,9 @@ class BasicDecryptionApp extends Component {
 		let self = this;
 		let rotation = self.getValidRotation();
 		let wordArr = self.getRandomWord();
-		let rotations = wordArr.map(e => rotation);
+		let encryptedArr = self.encryptWord(wordArr, rotation);
 
-		this.setState({wordArr, rotation, rotations});
+		this.setState({wordArr, rotation, encryptedArr});
 	}
 
 	giveUp() {
@@ -79,42 +97,42 @@ class BasicDecryptionApp extends Component {
 	}
 
 	rotateCharacter(character, rotation) {
-		character = (character.charCodeAt(0) - 97 + rotation) % 26 + 97;
+		character = (character.charCodeAt(0) - 97 + rotation);
+		if (character < 0)
+			character += 26;
+		else if (character > 25)
+			character -= 26;
+
+		character = character % 26 + 97;
 		character = String.fromCharCode(character).toLowerCase();
 		return character;
 	}
 
 	onUp(idx) {
-		let { rotations } = this.state;
-		rotations[idx]++;
-		if (rotations[idx] > 25) rotations[idx] = 0;
-
-		this.setState({rotations})
+		let { encryptedArr } = this.state;
+		encryptedArr[idx] = this.rotateCharacter(encryptedArr[idx], 1);
+		this.setState({encryptedArr});
 	}
 
 	onDown(idx) {
-		let { rotations } = this.state;
-		rotations[idx]--;
-		if (rotations[idx] < 0) rotations[idx] = 25;
-
-		this.setState({rotations})
+		let { encryptedArr } = this.state;
+		encryptedArr[idx] = this.rotateCharacter(encryptedArr[idx], -1);
+		this.setState({encryptedArr});
 	}
 
 	restart() {
-		let self = this;
-		let rotation = self.getValidRotation();
-		let rotations = this.state.rotations.map(e => { return rotation });
-		this.setState({rotation, rotations, numStrikes: 0, numCorrect: 0, status: ""});
+		let rotation = this.getValidRotation();
+		this.setState({rotation, numStrikes: 0, numCorrect: 0, status: ""});
 	}
 
 	reset() {
-		let rotations = this.state.rotations.map(e => { return this.state.rotation });
-		this.setState({rotations});
+		let encryptedArr = this.encryptWord(this.state.wordArr, this.state.rotation);
+		this.setState({encryptedArr});
 	}
 
 	isValid() {
-		for (var i = 0; i < this.state.rotations.length; i++) {
-			if (this.state.rotations[i] !== 0) {
+		for (var i = 0; i < this.state.wordArr.length; i++) {
+			if (this.state.wordArr[i] !== this.state.encryptedArr[i]) {
 				return false;
 			}
 		}
@@ -134,9 +152,25 @@ class BasicDecryptionApp extends Component {
 		}
 	}
 
+	getRandomPhrase(phrases) {
+		if (phrases)
+			return (phrases[Math.floor(Math.random() * phrases.length)]);
+		return "(empty list) This is an error. Should not be here.";
+	}
+
 	checkLoss(numStrikes) {
+		let { insults0, insults1, insults2, insults3, numCorrect } = this.state;
+
 		if (numStrikes === this.state.limit) {
-			this.setState({numStrikes, status: "Wow. I hope you're not trying to get into cyber security."});
+			if (numCorrect === 0) {
+				this.setState({numStrikes, status: this.getRandomPhrase(insults0)});
+			} else if (numCorrect === 1) {
+				this.setState({numStrikes, status: this.getRandomPhrase(insults1)});
+			} else if (numCorrect === 2) {
+				this.setState({numStrikes, status: this.getRandomPhrase(insults2)});
+			} else {
+				this.setState({numStrikes, status: this.getRandomPhrase(insults3)});
+			}
 		} else {
 			this.setState({numStrikes});
 		}
@@ -166,7 +200,7 @@ class BasicDecryptionApp extends Component {
 			buttons.push(<button id="btnReset" key="btnReset" onClick={this.reset.bind(this)}>Reset</button>);
 			buttons.push(<button id="btnGiveUp" key="btnGiveUp" onClick={this.giveUp.bind(this)}>Give Up</button>);
 		}
-		console.log(self.state);
+		// console.log(self.state);
 		return (
 			<div className="BasicDecryptionApp">
 			<div className="status">{this.state.status}</div>
@@ -176,8 +210,7 @@ class BasicDecryptionApp extends Component {
 				</div>
 
 				<div className="encrypted">
-					{this.state.wordArr.map((c, idx) => {
-						c = this.rotateCharacter(c, this.state.rotations[idx]);
+					{this.state.encryptedArr.map((c, idx) => {
 						return (
 							<CharacterBox key={"c" + idx}
 								idx={idx}
