@@ -166,7 +166,7 @@ class BasicDecryptionApp extends Component {
 			buttons.push(<button id="btnReset" key="btnReset" onClick={this.reset.bind(this)}>Reset</button>);
 			buttons.push(<button id="btnGiveUp" key="btnGiveUp" onClick={this.giveUp.bind(this)}>Give Up</button>);
 		}
-		// console.log(self.state);
+		console.log(self.state);
 		return (
 			<div className="BasicDecryptionApp">
 			<div className="status">{this.state.status}</div>
