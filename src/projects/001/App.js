@@ -9,6 +9,7 @@ class BalloonDisplay extends Component {
 			range: Math.floor(Math.random() * 10) + 1
 		}
 	}
+
 	render() {
 		return (
 			<div >

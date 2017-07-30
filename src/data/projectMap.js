@@ -63,7 +63,6 @@ const ProjectMap = {
 	16: { app: Portfolio,			props: null },
 };
 
-
 export {
 	ProjectMap
 }

@@ -3,14 +3,13 @@ import PropTypes from 'prop-types';
 import { pad } from '../utils';
 import { Link } from 'react-router-dom';
 
-class Project extends React.Component {
+class ProjectBox extends React.Component {
 	render() {
 		let props = this.props;
 		let id = pad(props.id, 3);
 		return (
 			<li
-				className="project flex-item"
-				onClick={ this.props.onClick }
+				className="project-box flex-item"
 			>
 				<Link to={"/project/" + id}>
 					<img src={"/img/" + id + ".png"} alt=""/>
@@ -24,9 +23,8 @@ class Project extends React.Component {
 	}
 }
 
-Project.propTypes = {
-	name: PropTypes.string.isRequired,
-	onClick: PropTypes.func.isRequired
+ProjectBox.propTypes = {
+	name: PropTypes.string.isRequired
 }
 
-export default Project;
+export default ProjectBox;

@@ -22,7 +22,9 @@ class RandomQuotesApp extends Component {
 		.header("X-Mashape-Key", "wbyCsc5ChWmshvo4hUgvEMlE4Ro1p194zHsjsn3FiEwT7LIKgV")
 		.header("Accept", "application/json")
 		.end(function (result) {
-			self.setState({ quotes: result.body });
+			// To prevent error when switching through projects too fast.
+			if (self.refs.exists)
+				self.setState({ quotes: result.body });
 		});
 	}
 
@@ -62,7 +64,7 @@ class RandomQuotesApp extends Component {
 
 		let quote = this.state.quotes[0];
 		return (
-			<div className="RandomQuotesApp">
+			<div className="RandomQuotesApp" ref="exists">
 				<div className="box-wrapper">
 					<div className="quote-box"
 						style={

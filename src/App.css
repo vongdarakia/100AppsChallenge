@@ -56,7 +56,7 @@
 	margin: auto;
 }
 
-.project {
+.project-box {
 	width: 200px;
 	height: 200px;
 	display: inline-block;
@@ -69,7 +69,7 @@
 	cursor: pointer;
 }
 
-.project img {
+.project-box img {
 	width: 200px;
 	height: 200px;
 }

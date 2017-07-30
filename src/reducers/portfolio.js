@@ -1,10 +1,9 @@
 let initProjects = require('../data/projects.json');
 let initState = {
-	projects: initProjects,
-	currIdx: 0
+	projects: initProjects
 }
 const portfolio = (state = initState, action) => {
-	console.log(state);
+	// console.log(state);
 	switch (action.type) {
 		case 'DO_SOMETHING':
 			return [

@@ -4,32 +4,37 @@ import ProjectList from '../components/ProjectList';
 import { nextProject } from '../actions';
 
 const mapStateToProps = state => {
-	console.log("map");
+	// console.log("map");
 	// console.log(state);
 	return {
 		projects: state.portfolio.projects,
-		projectIdx: state.header.projectIdx
+		projectId: state.portfolio.projectId
 	}
 }
 
 function something(project) {
-	console.log(project);
+	console.log("something");
 	return {
 		...project,
 		type: 'SOMETHING'
 	}
 }
 
-const mapDispatchToProps = dispatch => {
-	return {
-		onProjectClick: (project) => {
-			dispatch(something(project));
-		},
-		nextProject: () => {
-			dispatch(nextProject());
-		}
-		// actions: bindActionCreators(Actions, dispatch)
-	};
+// const mapDispatchToProps = dispatch => {
+// 	return {
+// 		onProjectClick: (project) => {
+// 			dispatch(something(project));
+// 		},
+// 		nextProject: () => {
+// 			dispatch(nextProject());
+// 		}
+// 		// actions: bindActionCreators(Actions, dispatch)
+// 	};
+// }
+
+const mapDispatchToProps = {
+	nextProject,
+	onProjectClick: something
 }
 
 const Portfolio = connect(

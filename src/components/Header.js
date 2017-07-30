@@ -7,7 +7,7 @@ class Header extends React.Component {
 	render() {
 
 		let props = this.props;
-		console.log(props);
+		// console.log(props);
 		// let id = pad(props.id, 3);
 		return (
 			<div className="header">
@@ -41,9 +41,11 @@ class Header extends React.Component {
 	}
 }
 
-// Header.propTypes = {
-// 	name: PropTypes.string.isRequired,
-// 	onClick: PropTypes.func.isRequired
-// }
+Header.propTypes = {
+	project: PropTypes.shape({
+		id: PropTypes.number.isRequired,
+		name: PropTypes.string.isRequired
+	}).isRequired
+}
 
 export default Header;

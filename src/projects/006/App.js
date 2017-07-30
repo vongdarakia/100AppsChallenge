@@ -17,6 +17,7 @@ class TypingGameApp extends Component {
 		let word = this.getNewWord();
 		let letters = {};
 		let letterList = [];
+		let self = this;
 
 		for (var i = 0; i < word.length; i++) {
 			letterList.push(word[i]);
@@ -28,12 +29,19 @@ class TypingGameApp extends Component {
 			letterList: letterList,
 			score: 0,
 			streak: 0,
-			multiplier: 1
+			multiplier: 1,
+			// Have to do it this way otherwise the program will have a hard
+			// time removing the event listener.
+			keyHandler: self.handleKeyup.bind(this)
 		}
 	}
 
 	componentDidMount() {
-		window.addEventListener("keyup", this.handleKeyup.bind(this));
+		window.addEventListener("keyup", this.state.keyHandler);
+	}
+
+	componentWillUnmount() {
+		window.removeEventListener("keyup", this.state.keyHandler);
 	}
 
 	handleKeyup(e) {
@@ -100,7 +108,7 @@ class TypingGameApp extends Component {
 
 	render() {
 		return (
-			<div className="TypingGameApp">
+			<div className="TypingGameApp" ref="exist">
 				<div className="container">
 					<div className="info">
 						<div className="score">{this.state.score}</div>
