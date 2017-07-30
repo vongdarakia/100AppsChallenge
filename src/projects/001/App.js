@@ -20,7 +20,6 @@ class BalloonDisplay extends Component {
 						let range =  Math.floor(Math.random() * 10) + 1;
 						this.setState({air: 0, range: range});
 						air = 0;
-
 					} else {
 						this.setState({air: air + 1});
 					}

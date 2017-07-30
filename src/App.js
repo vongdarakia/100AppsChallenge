@@ -39,42 +39,6 @@ class Portfolio extends Component {
 	}
 }
 
-// <Route exact path="/" render={
-// 	() => {
-// 		return React.createElement(Portfolio, { project: projects[15] });
-// 	}
-// } />
-// {projects.map((project, idx) => {
-// 	let props = ProjectMap[project.id] ? ProjectMap[project.id].props : null;
-// 	let App = ProjectMap[project.id] ? ProjectMap[project.id].app : null;
-//
-// 	let header = (<Route
-// 		key={"header-" + idx}
-// 		path={"/project/" + pad(project.id, 3)}
-// 		render={
-// 			() => {
-// 				return React.createElement(ProjectNavigationHeader, { project });
-// 			}
-// 		} />);
-// 	if (project.id === 16) {
-// 		header = "";
-// 	}
-// 	return (
-// 		<div key={"group-" + idx}>
-// 			{header}
-// 			<Route
-// 				key={idx}
-// 				path={"/project/:projectIdx" + pad(project.id, 3)}
-// 				render={
-// 					() =>
-// 						(<ProjectApp otherProps={props} app={app}/>)
-//
-// 				}
-// 				 />
-// 		</div>
-// 	)
-// })}
-
 const mapStateToProps = state => {
 	return {
 		...state.portfolio

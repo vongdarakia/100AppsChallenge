@@ -123,5 +123,13 @@
 		"date": "7/27/2017",
 		"description": "Same portfolio, but now with routing! No more slow loads!",
 		"url": ""
+	},
+	{
+		"id": 17,
+		"name": "Portfolio v2.1",
+		"date": "7/28/2017",
+		"description": "Added a controller header to help traverse through the projects.",
+		"url": "",
+		"notes": "Huge thanks to Pavel Prichoďko from Rapid.io for going through my code and telling me the pros and cons of my structure. You gave me a better understanding of React, Redux and ES6. Words cannot express how thankful I am for you taking over 30 minutes of your time to mentor me and show me better ways to structure my project. Thank you so much!"
 	}
 ]
