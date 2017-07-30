@@ -1,0 +1,121 @@
+.BasicDecryptionApp {
+	background-color: #22313F;
+	padding: 60px 0 200px 0;
+	color: white;
+	font-family: 'Source Code Pro', monospace;
+}
+
+.BasicDecryptionApp .CharacterBox {
+	display: inline-block;
+	width: 50px;
+	text-align: center;
+}
+
+.BasicDecryptionApp .CharacterBox .up,
+.BasicDecryptionApp .CharacterBox .down,
+.BasicDecryptionApp .CharacterBox .character {
+	display: block;
+}
+
+.BasicDecryptionApp .CharacterBox .up {
+	padding-top: 5px;
+}
+.BasicDecryptionApp .CharacterBox .down {
+	padding-bottom: 5px;
+}
+
+
+.BasicDecryptionApp .CharacterBox .up,
+.BasicDecryptionApp .CharacterBox .down {
+	cursor: pointer;
+}
+
+.BasicDecryptionApp .CharacterBox .up:hover,
+.BasicDecryptionApp .CharacterBox .down:hover {
+	color: #22A7F0;
+}
+
+.BasicDecryptionApp .CharacterBox .character {
+	line-height: 50px;
+	font-size: 1.5em;
+}
+
+.BasicDecryptionApp .red {
+	color: #EF4836;
+}
+
+.BasicDecryptionApp .green {
+	color: #2ECC71;
+}
+
+.BasicDecryptionApp .status {
+	text-align: center;
+	margin: 20px 0;
+	font-weight: 100;
+	height: 40px;
+	line-height: 40px;
+	font-size: 1.2em;
+}
+
+.BasicDecryptionApp .marks {
+	height: 60px;
+}
+
+.BasicDecryptionApp .strikes,
+.BasicDecryptionApp .corrects,
+.BasicDecryptionApp .encrypted {
+	text-align: center;
+}
+
+.BasicDecryptionApp .strikes,
+.BasicDecryptionApp .corrects {
+	min-height: 32px;
+}
+
+.BasicDecryptionApp .strike,
+.BasicDecryptionApp .correct {
+	font-size: 2em;
+	transition: all .3s;
+}
+
+.BasicDecryptionApp .encrypted {
+	margin: 30px 0;
+}
+
+.BasicDecryptionApp .buttons {
+	text-align: center;
+}
+
+.BasicDecryptionApp .buttons button {
+	margin: 0 10px;
+	border: 1px solid white;
+	border-radius: 4px;
+	background-color: transparent;
+	color: white;
+	font-size: 1.2em;
+	padding: 8px 16px;
+	outline: none;
+	cursor: pointer;
+	transition: all .3s;
+	font-family: 'Source Code Pro', monospace;
+}
+
+.BasicDecryptionApp #btnGiveUp:hover {
+	color: #EF4836;
+	border-color: #EF4836;
+}
+
+.BasicDecryptionApp #btnCheck:hover {
+	color: #2ECC71;
+	border-color: #2ECC71;
+}
+
+.BasicDecryptionApp #btnReset:hover {
+	color: #E9D460;
+	border-color: #E9D460;
+}
+
+.BasicDecryptionApp #btnRestart:hover {
+	color: #22A7F0;
+	border-color: #22A7F0;
+}

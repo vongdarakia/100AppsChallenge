@@ -14,6 +14,7 @@ import DiceRollApp 			from '../projects/013/App';
 import PortfolioV1App 		from '../projects/014/App';
 import GuessPresidentApp	from '../projects/015/App';
 import Portfolio			from '../containers/Portfolio';
+import BasicDecryptionApp	from '../projects/018/App';
 
 let menu = {
 	sides: [
@@ -62,6 +63,7 @@ const ProjectMap = {
 	15: { app: GuessPresidentApp,	props: null },
 	16: { app: Portfolio,			props: null },
 	17: { app: Portfolio,			props: null },
+	18: { app: BasicDecryptionApp,	props: null },
 };
 
 export {

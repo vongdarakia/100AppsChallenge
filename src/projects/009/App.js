@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import unirest from 'unirest';
 import './App.css';
-import './font-awesome-4.7.0/css/font-awesome.css';
+import '../../css/font-awesome-4.7.0/css/font-awesome.css';
 
 var disabled = "";
 var baseUrl = "https://love-calculator.p.mashape.com/getPercentage?";
