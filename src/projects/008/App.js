@@ -60,7 +60,7 @@ class RandomQuotesApp extends Component {
 
 	render() {
 		if (this.state.quotes === null || this.state.quotes.length === 0)
-			return (<h2>Loading...</h2>);
+			return (<h2 ref="exists">Loading...</h2>);
 
 		let quote = this.state.quotes[0];
 		return (
