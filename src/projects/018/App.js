@@ -121,8 +121,8 @@ class BasicDecryptionApp extends Component {
 	}
 
 	restart() {
-		let rotation = this.getValidRotation();
-		this.setState({rotation, numStrikes: 0, numCorrect: 0, status: ""});
+		this.nextRandomWord();
+		this.setState({numStrikes: 0, numCorrect: 0, status: ""});
 	}
 
 	reset() {
