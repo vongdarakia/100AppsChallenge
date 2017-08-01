@@ -35,7 +35,7 @@ class BasicDecryptionApp extends Component {
 			insults0: [
 				"Wow. I hope you're not trying to get into cyber security.",
 				"Seriously? You had 3 chances.",
-				"Disappointed. Even my grandma can figure one out."
+				"Disappointed. Even my grandma can figure at least one out."
 			],
 			insults1: [
 				"Not bad, but you still suck.",
@@ -52,6 +52,23 @@ class BasicDecryptionApp extends Component {
 				"Why did you even play this far?",
 				"Did you really find this game fun? I'm surprised you got this far."
 			],
+			praises: [
+				"Nice!",
+				"Good job!",
+				"Lets see if you can get one more.",
+				"Not bad. Maybe you might be good enough to work for me.",
+				"Great!",
+				"You might be better than my grandma."
+			],
+			criticisms: [
+				"Wrong!",
+				"Incorrect!",
+				"C'mon, I had high hopes for you.",
+				"I thought you were better than this.",
+				"It's really not that hard.",
+				"Really? That was your guess?",
+				"That doesn't even make sense."
+			]
 		}
 	}
 
@@ -127,7 +144,7 @@ class BasicDecryptionApp extends Component {
 
 	reset() {
 		let encryptedArr = this.encryptWord(this.state.wordArr, this.state.rotation);
-		this.setState({encryptedArr});
+		this.setState({encryptedArr, status: ""});
 	}
 
 	isValid() {
@@ -143,7 +160,8 @@ class BasicDecryptionApp extends Component {
 		if (this.isValid()) {
 			this.setState(prev => {
 				return {
-					numCorrect: prev.numCorrect + 1
+					numCorrect: prev.numCorrect + 1,
+					status: this.getRandomPhrase(this.state.praises)
 				}
 			});
 			this.nextRandomWord();
@@ -159,7 +177,7 @@ class BasicDecryptionApp extends Component {
 	}
 
 	checkLoss(numStrikes) {
-		let { insults0, insults1, insults2, insults3, numCorrect } = this.state;
+		let { insults0, insults1, insults2, insults3, criticisms, numCorrect } = this.state;
 
 		if (numStrikes === this.state.limit) {
 			if (numCorrect === 0) {
@@ -172,7 +190,7 @@ class BasicDecryptionApp extends Component {
 				this.setState({numStrikes, status: this.getRandomPhrase(insults3)});
 			}
 		} else {
-			this.setState({numStrikes});
+			this.setState({numStrikes, status: this.getRandomPhrase(criticisms)});
 		}
 	}
 
