@@ -50,7 +50,7 @@ class BasicDecryptionApp extends Component {
 			insults3: [
 				"Nice job. You have no life.",
 				"Why did you even play this far?",
-				"Did you really find this game fun? I'm surprised you got this far."
+				"Did you really find this game fun? I'm surprised you're doing so well."
 			],
 			praises: [
 				"Nice!",
